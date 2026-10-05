@@ -1,0 +1,9 @@
+/* Copyright (c) 2026 Shirangi. All rights reserved. */
+(function(){
+  const KEY='shirangi.module.saved-search.v1';const read=()=>globalThis.ShirangiStore?.readLegacy(KEY,KEY,[])??memory.get(KEY)??[];
+  const memory=new Map();
+  function render(){const el=document.getElementById('saved-search-list');if(!el)return;const rows=read();el.innerHTML=rows.length?rows.map(x=>`<div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex justify-between gap-2"><div><b>${escapeHtml(x.name)}</b><div class="text-xs text-slate-400 mt-1">${escapeHtml(x.district||'همه مناطق')} · سقف ${Number(x.budget||0).toLocaleString('fa-IR')}</div></div><button class="px-3 py-2 rounded-lg bg-sky-700" onclick="ShirangiSavedSearch.run('${String(x.id).replace(/'/g,"\\'")}')">بررسی فایل جدید</button></div>`).join(''):'<p class="text-slate-500">جستجوی ذخیره‌شده‌ای نداریم.</p>'}
+  function save(){const name=document.getElementById('saved-name')?.value.trim(),district=document.getElementById('saved-district')?.value.trim(),budget=Number(document.getElementById('saved-budget')?.value||0);if(!name){alert('نام جستجو را وارد کنید.');return}const rows=read();rows.unshift({id:crypto.randomUUID?.()||String(Date.now()),name,district,budget,createdAt:Date.now()});globalThis.ShirangiStore ? globalThis.ShirangiStore.write(KEY,rows.slice(0,100)) : memory.set(KEY,rows.slice(0,100));render();}
+  function run(id){const x=read().find(r=>String(r.id)===String(id));const props=Array.isArray(window.properties)?window.properties:[];const m=props.filter(p=>(!x.district||String(p.district||p.address||'').includes(x.district))&&(!x.budget||Number(p.price||p.salePrice||p.rent||0)<=x.budget));alert(`نتیجه «${x?.name||'جستجو'}»: ${m.length.toLocaleString('fa-IR')} فایل مطابق در فایل‌های ثبت‌شده.`)}
+  window.ShirangiSavedSearch={render,save,run};
+})();

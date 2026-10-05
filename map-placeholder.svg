@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<rect width="1400" height="900" fill="#eef2f7"/>
+<g stroke="#d5dce5" stroke-width="3" opacity=".9">
+  <path d="M-100 180 C250 80 420 260 720 150 S1120 100 1500 230" fill="none"/>
+  <path d="M-100 430 C240 320 480 520 780 390 S1180 360 1500 500" fill="none"/>
+  <path d="M-100 690 C260 560 500 760 820 610 S1190 620 1500 760" fill="none"/>
+  <path d="M220 -100 C120 180 330 320 190 600 S180 820 120 1000" fill="none"/>
+  <path d="M520 -100 C430 170 650 300 510 560 S520 820 450 1000" fill="none"/>
+  <path d="M850 -100 C760 160 960 330 820 560 S900 820 790 1000" fill="none"/>
+  <path d="M1160 -100 C1040 180 1240 320 1100 580 S1200 820 1080 1000" fill="none"/>
+</g>
+<g stroke="#ffffff" stroke-width="14" opacity=".95">
+  <path d="M-50 300 L1450 520"/><path d="M50 760 L1370 90"/><path d="M350 -30 L1020 930"/>
+</g>
+<g fill="#94a3b8" font-family="Tahoma,Arial,sans-serif" font-size="28" text-anchor="middle">
+  <text x="350" y="260">منطقه ۵</text><text x="700" y="250">منطقه ۲</text><text x="1040" y="320">منطقه ۳</text>
+  <text x="420" y="520">منطقه ۶</text><text x="760" y="510">منطقه ۷</text><text x="1080" y="570">منطقه ۱</text>
+  <text x="600" y="760">نقشه پایه موقت</text>
+</g>
+<rect x="475" y="405" width="450" height="86" rx="24" fill="#0f172a" fill-opacity=".86"/>
+<text x="700" y="442" fill="#fff" font-family="Tahoma,Arial,sans-serif" font-size="24" text-anchor="middle">نقشه پایه موقت شیرنگی</text>
+<text x="700" y="474" fill="#cbd5e1" font-family="Tahoma,Arial,sans-serif" font-size="17" text-anchor="middle">آماده جایگزینی با نقشه رسمی شهرداری</text>
+</svg>

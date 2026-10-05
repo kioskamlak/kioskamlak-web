@@ -1,0 +1,36 @@
+{
+  "schema": 2,
+  "generatedBy": "Shirangi supplied runtime integration",
+  "assets": {
+    "leaflet.js": {
+      "source": "supplied asset",
+      "sha256": "85d455b4522415f6badc42a0e7d17c919d100347d6b8958bd0dc738fdecd6d50",
+      "bytes": 147563
+    },
+    "leaflet.css": {
+      "source": "supplied asset",
+      "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6",
+      "bytes": 14806
+    },
+    "leaflet.draw.js": {
+      "source": "supplied asset",
+      "sha256": "b22a1f7385308e5adadd85a4c2d84e9fc523ebd70d37868cba0fe2387362460b",
+      "bytes": 67484
+    },
+    "leaflet.draw.css": {
+      "source": "supplied asset",
+      "sha256": "5f30f74696873efee5cd7f6ab7eda7d63e5c5a3e3c3b6e0ab2068662928df31f",
+      "bytes": 5267
+    },
+    "supabase.js": {
+      "source": "supplied asset",
+      "sha256": "84ee9bf45695c1dd3ba1595b6bcfb0f09672434631351ffc8ebe9140545d5ff6",
+      "bytes": 218318
+    },
+    "vazirmatn.css": {
+      "source": "generated from bundled TTF",
+      "sha256": "28d4b2f15106df4223518b0390f89890905a1b10241b3ec3f6025c5d703347cb",
+      "bytes": 328097
+    }
+  }
+}
