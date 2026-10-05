@@ -24,9 +24,26 @@ jobs:
 
       - name: Extract web.zip
         run: |
-          rm -rf site
-          mkdir site
-          unzip -q web.zip -d site
+          rm -rf site extracted
+          mkdir -p site extracted
+          unzip -q web.zip -d extracted
+
+          if [ -f extracted/index.html ]; then
+            cp -a extracted/. site/
+          elif [ -f extracted/web/index.html ]; then
+            cp -a extracted/web/. site/
+          else
+            INDEX=$(find extracted -name index.html -type f | head -n 1)
+            if [ -z "$INDEX" ]; then
+              echo "index.html not found"
+              exit 1
+            fi
+            ROOT=$(dirname "$INDEX")
+            cp -a "$ROOT"/. site/
+          fi
+
+          echo "Published files:"
+          find site -maxdepth 2 -type f | head -100
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
